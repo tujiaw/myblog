@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tujiaw Github</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./stylesheets/index.css">
+  <script src="https://cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="./thirdparty/bmob-min.js"></script>
+  <script src="./thirdparty/jquery-starfield/dist/jquery-starfield.js"></script>
+  <script src="./javascripts/bmobController.js"></script>
+
+  <script id="article" type="text/template">
+      <article>
+        <header>
+          <h1 onclick="onTitleClicked(this)" url="<%= url %>"><%= title %></h1>
+        </header>
+        <footer>
+          <ul>
+            <li><span class="glyphicon glyphicon-bookmark"></span></li>
+            <li><%= type %></li>
+            <li class="separator">&nbsp;|&nbsp;</li>
+            <li><span class="glyphicon glyphicon-calendar"></span></li>
+            <li><%= date %></li>
+          </ul>
+        </footer>
+        <div id="content">
+          <%- content %>
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  </script>
+</head>
+<body>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">Home</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Tujiaw</a></li>
+            <li><a href="#about">&#x5173;&#x4E8E;</a></li>
+            <li><a href="./view/usefullinks.html">&#x5E38;&#x7528;&#x94FE;&#x63A5;</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&#x6587;&#x7AE0;&#x5206;&#x7C7B; <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">&#x6309;&#x65E5;&#x671F;&#x5F52;&#x6863;</a></li>
+                <li><a href="#">&#x6309;&#x7C7B;&#x522B;&#x5F52;&#x6863;</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </header>
+  <div id="container">
+    <div id="starfield"></div>
+    <nav>
+        <div id="myheader">
+          <div style="cursor:pointer" onclick="window.open(&apos;https://github.com/tujiaw/tujiaw.github.io&apos;, &apos;_blank&apos;)"><span class="starMe">star me</span></div>
+          <img src="./images/header.png">
+        </div>
+        <div id="sign">Keep It Simple, Stupid</div>
+        <a href="https://github.com/tujiaw" target="_blank">View Github</a>
+        <a href="http://tujiaw.github.io/view/wchathot.html" target="_blank">&#x5FAE;&#x4FE1;&#x70ED;&#x95E8;&#x7CBE;&#x9009;</a>
+        <a href="http://blog.csdn.net/tujiaw" target="_blank">&#x6211;&#x7684;CSDN&#x535A;&#x5BA2;</a>
+        <div class="music">
+          <p></p>
+          <audio src="" controls="controls"></audio>
+        </div>
+    </nav>
+    <header id="sectionHeader"></header>
+    <img src="./images/list-icon.png" alt="" width="24" height="24" id="menuBtn" onclick="onLeftToggle(this)">
+    <section>
+      <article>
+        <header>
+          <h1 onclick="onTitleClicked(this)" url="view/blog/20160623182142/detail.html">&#x4F7F;&#x7528;QWebEngineView&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x65F6;&#x5D29;&#x6E83;</h1>
+        </header>
+        <footer>
+          <ul>
+            <li><span class="glyphicon glyphicon-bookmark"></span></li>
+            <li>Qt</li>
+            <li class="separator">&#xA0;|&#xA0;</li>
+            <li><span class="glyphicon glyphicon-calendar"></span></li>
+            <li>2016/06/23 18:21:42</li>
+          </ul>
+        </footer>
+        <div id="content">
+          Qt5WebEngineCored.dll!base::debug::BreakDebugger(void)
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  
+      <article>
+        <header>
+          <h1 onclick="onTitleClicked(this)" url="view/blog/20160612132400/detail.html">QWebEngineView&#x4E0E;js&#x4EA4;&#x4E92;</h1>
+        </header>
+        <footer>
+          <ul>
+            <li><span class="glyphicon glyphicon-bookmark"></span></li>
+            <li>Qt</li>
+            <li class="separator">&#xA0;|&#xA0;</li>
+            <li><span class="glyphicon glyphicon-calendar"></span></li>
+            <li>2016/06/12 13:24:00</li>
+          </ul>
+        </footer>
+        <div id="content">
+          Qt&#x65B0;&#x7248;&#x672C;&#x4F7F;&#x7528;QWebEngineView&#x6765;&#x5C55;&#x793A;html&#x9875;&#x9762;&#x5BF9;QWebView&#x4E0D;&#x518D;&#x8FDB;&#x884C;&#x7EF4;&#x62A4;&#x4E86;&#xFF0C;QWebEngineView&#x4F7F;&#x7528;chromium&#x5185;&#x6838;&#x5C06;&#x5E26;&#x6765;&#x66F4;&#x597D;&#x7684;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x3002;
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  
+      <article>
+        <header>
+          <h1 onclick="onTitleClicked(this)" url="view/blog/20160604065937/detail.html">&#x4F7F;&#x7528;photoshop&#x5C06;&#x56FE;&#x7247;&#x5236;&#x4F5C;&#x6210;&#x5706;&#x5F62;</h1>
+        </header>
+        <footer>
+          <ul>
+            <li><span class="glyphicon glyphicon-bookmark"></span></li>
+            <li>photoshop</li>
+            <li class="separator">&#xA0;|&#xA0;</li>
+            <li><span class="glyphicon glyphicon-calendar"></span></li>
+            <li>2016/06/04 06:59:37</li>
+          </ul>
+        </footer>
+        <div id="content">
+          &#x53EA;&#x9700;&#x8981;&#x7B80;&#x5355;&#x7684;&#x51E0;&#x6B65;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x6709;&#x56FE;&#x6709;&#x771F;&#x76F8;
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  
+      <article>
+        <header>
+          <h1 onclick="onTitleClicked(this)" url="view/blog/20160531222951/detail.html">Atom&#x8FC7;&#x6EE4;&#x5DE5;&#x7A0B;&#x6587;&#x4EF6;</h1>
+        </header>
+        <footer>
+          <ul>
+            <li><span class="glyphicon glyphicon-bookmark"></span></li>
+            <li>Atom</li>
+            <li class="separator">&#xA0;|&#xA0;</li>
+            <li><span class="glyphicon glyphicon-calendar"></span></li>
+            <li>2016/05/31 22:29:51</li>
+          </ul>
+        </footer>
+        <div id="content">
+          Atom&#x589E;&#x52A0;&#x5DE5;&#x7A0B;&#x6587;&#x4EF6;&#x4F1A;&#x663E;&#x793A;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x5728;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x600E;&#x4E48;&#x8FC7;&#x6EE4;&#x6389;&#x4E00;&#x4E9B;&#x6211;&#x4EEC;&#x6839;&#x672C;&#x5C31;&#x4E0D;&#x4F1A;&#x53BB;&#x7F16;&#x8F91;&#x7684;&#x6587;&#x4EF6;
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  
+      <article>
+        <header>
+          <h1 onclick="onTitleClicked(this)" url="view/blog/20160531220434/detail.html">QFrame&#x4E0E;QWidget&#x7684;&#x533A;&#x522B;</h1>
+        </header>
+        <footer>
+          <ul>
+            <li><span class="glyphicon glyphicon-bookmark"></span></li>
+            <li>Qt</li>
+            <li class="separator">&#xA0;|&#xA0;</li>
+            <li><span class="glyphicon glyphicon-calendar"></span></li>
+            <li>2016/05/31 22:04:34</li>
+          </ul>
+        </footer>
+        <div id="content">
+          &#x4ECE;QWidget&#x7EE7;&#x627F;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;widget&#xFF0C;&#x5728;&#x8BBE;&#x7F6E;&#x6837;&#x5F0F;&#x8868;&#x7684;&#x65F6;&#x5019;&#x53D1;&#x73B0;&#x6CA1;&#x6709;&#x751F;&#x6548;&#xFF0C;&#x53D1;&#x73B0;&#x539F;&#x6765;&#x8DDF;QFrame&#x6709;&#x5173;
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  
+      <article>
+        <header>
+          <h1 onclick="onTitleClicked(this)" url="view/blog/20160529135223/detail.html">&#x4ECB;&#x7ECD;electron&#x6846;&#x67B6;</h1>
+        </header>
+        <footer>
+          <ul>
+            <li><span class="glyphicon glyphicon-bookmark"></span></li>
+            <li>electron</li>
+            <li class="separator">&#xA0;|&#xA0;</li>
+            <li><span class="glyphicon glyphicon-calendar"></span></li>
+            <li>2016/05/29 13:52:23</li>
+          </ul>
+        </footer>
+        <div id="content">
+          &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6574;&#x5408;&#x4E86;Node&#xFF0C;Chromium&#xFF0C;V8&#x7684;&#x4E00;&#x4E2A;&#x6846;&#x67B6;&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;JavaScript&#xFF0C;HTML, CSS&#x6280;&#x672F;&#x6765;&#x5F00;&#x53D1;&#x684C;&#x9762;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  
+      <article>
+        <header>
+          <h1 onclick="onTitleClicked(this)" url="view/blog/20160526150110/detail.html">&#x65B9;&#x5F62;&#x56FE;&#x7247;&#x4F7F;&#x7528;QLabel&#x663E;&#x793A;&#x6210;&#x5706;&#x5F62;</h1>
+        </header>
+        <footer>
+          <ul>
+            <li><span class="glyphicon glyphicon-bookmark"></span></li>
+            <li>Qt</li>
+            <li class="separator">&#xA0;|&#xA0;</li>
+            <li><span class="glyphicon glyphicon-calendar"></span></li>
+            <li>2016/05/26 15:01:10</li>
+          </ul>
+        </footer>
+        <div id="content">
+          
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  
+      <article>
+        <header>
+          <h1 onclick="onTitleClicked(this)" url="view/blog/20160526132522/detail.html">&#x600E;&#x6837;&#x5728;&#x672C;&#x535A;&#x5BA2;&#x4E2D;&#x53D1;&#x5E03;&#x4E00;&#x7BC7;&#x65B0;&#x6587;&#x7AE0;</h1>
+        </header>
+        <footer>
+          <ul>
+            <li><span class="glyphicon glyphicon-bookmark"></span></li>
+            <li>&#x6742;&#x6587;</li>
+            <li class="separator">&#xA0;|&#xA0;</li>
+            <li><span class="glyphicon glyphicon-calendar"></span></li>
+            <li>2016/05/26 13:25:22</li>
+          </ul>
+        </footer>
+        <div id="content">
+          &#x8FD9;&#x4E2A;&#x535A;&#x5BA2;&#x662F;&#x4F7F;&#x7528;github pages&#x6765;&#x5C55;&#x793A;&#x7684;
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  
+      <article>
+        <header>
+          <h1 onclick="onTitleClicked(this)" url="view/blog/20160526130708/detail.html">&#x6211;&#x7684;&#x7B2C;&#x4E00;&#x7BC7;&#x535A;&#x5BA2;</h1>
+        </header>
+        <footer>
+          <ul>
+            <li><span class="glyphicon glyphicon-bookmark"></span></li>
+            <li>&#x6742;&#x6587;</li>
+            <li class="separator">&#xA0;|&#xA0;</li>
+            <li><span class="glyphicon glyphicon-calendar"></span></li>
+            <li>2016/05/26 13:07:08</li>
+          </ul>
+        </footer>
+        <div id="content">
+          &#x65B0;&#x7684;&#x5199;&#x535A;&#x5BA2;&#x7684;&#x5730;&#x65B9;
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  
+      <article>
+        <header>
+          <h1 onclick="onTitleClicked(this)" url="view/blog/20160526125720/detail.html">Swift &#x7B97;&#x6CD5;&#x5B9E;&#x6218;&#x4E4B;&#x8DEF;&#xFF1A;&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x4E0E;&#x6280;&#x5DE7;</h1>
+        </header>
+        <footer>
+          <ul>
+            <li><span class="glyphicon glyphicon-bookmark"></span></li>
+            <li>Swift</li>
+            <li class="separator">&#xA0;|&#xA0;</li>
+            <li><span class="glyphicon glyphicon-calendar"></span></li>
+            <li>2016/05/26 12:57:20</li>
+          </ul>
+        </footer>
+        <div id="content">
+          Swift&#x662F;&#x82F9;&#x679C;&#x65B0;&#x63A8;&#x51FA;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF0C;&#x4E5F;&#x662F;&#x82F9;&#x679C;&#x9996;&#x4E2A;&#x5F00;&#x6E90;&#x8BED;&#x8A00;&#x3002;&#x76F8;&#x6BD4;&#x4E8E;&#x539F;&#x6765;&#x7684;Objective-C&#xFF0C;Swift&#x8981;&#x66F4;&#x8F7B;&#x4FBF;&#x548C;&#x7075;&#x6D3B;&#x3002;&#x7B14;&#x8005;&#x6700;&#x8FD1;&#x4F7F;&#x7528;Swift&#x5B9E;&#x8DF5;&#x4E86;&#x5927;&#x91CF;&#x7684;&#x7B97;&#x6CD5;&#xFF08;&#x7EDD;&#x5927;&#x90E8;&#x5206;&#x662F;&#x7845;&#x8C37;&#x5404;&#x5927;&#x516C;&#x53F8;&#x7684;&#x9762;&#x8BD5;&#x9898;&#xFF09;&#xFF0C;&#x5C06;&#x5FC3;&#x5F97;&#x4F53;&#x4F1A;&#x603B;&#x7ED3;&#x4E8E;&#x4E0B;
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  
+      <article>
+        <header>
+          <h1 onclick="onTitleClicked(this)" url="view/blog/20160526101641/detail.html">&#x65E7;&#x7248;&#x672C;&#x5BA2;&#x6237;&#x7AEF;&#x7A0B;&#x5E8F;&#x4F7F;&#x7528;&#x65B0;&#x670D;&#x52A1;&#x5668;&#x6570;&#x636E;</h1>
+        </header>
+        <footer>
+          <ul>
+            <li><span class="glyphicon glyphicon-bookmark"></span></li>
+            <li>C/C++</li>
+            <li class="separator">&#xA0;|&#xA0;</li>
+            <li><span class="glyphicon glyphicon-calendar"></span></li>
+            <li>2016/05/26 10:16:41</li>
+          </ul>
+        </footer>
+        <div id="content">
+          &#x5BA2;&#x6237;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x5347;&#x7EA7;&#x9020;&#x6210;&#x7684;&#x517C;&#x5BB9;&#x6027;&#x95EE;&#x9898;
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  </section>
+    <footer id="containerFooter">&#xA9;&#xA0;2016&#xA0;tujiaw&amp;zhudan All rights reserved.</footer>
+  </div>
+
+  <script>
+    $('#starfield').starfield();
+
+    bb.getSong('', function(error, result) {
+      if (error) {
+        console.log(result);
+      } else {
+        $('.music p').text(result.songname + ' - ' + result.singername);
+        $('.music audio').attr('src', result.url);
+      }
+    });
+
+    function onTitleClicked(self) {
+      window.location.assign($(self).attr('url'));
+    }
+
+    let leftBar = {
+      nav: $('#container nav'),
+      starfield: $('#starfield'),
+      section: $('section'),
+      menuBtn: $('#menuBtn'),
+      visible: true,
+      animate: false,
+      hideWidth: 750,
+      onResize: function() {
+        if ($(window).width() <= this.hideWidth) {
+          if (this.visible) {
+            this.setVisible(false);
+          }
+        } else {
+          if (!this.visible) {
+            this.setVisible(true);
+          }
+        }
+      },
+      setVisible: function(isVisible) {
+        if (this.visible === isVisible || this.animate) {
+          return;
+        }
+        this.visible = isVisible;
+        this.animate = true;
+        let offset = this.nav.width();
+        if (this.visible) {
+          offset *= -1;
+        }
+        this.nav.animate({'left': parseInt(this.nav.css('left')) - offset}, 'normal', 'linear', () => {});
+        this.starfield.animate({'left': parseInt(this.starfield.css('left')) - offset}, 'normal', 'linear', () => {});
+        this.section.animate({'left': parseInt(this.section.css('left')) - offset}, 'normal', 'linear', () => {});
+        this.menuBtn.animate({'left': parseInt(this.menuBtn.css('left')) - offset}, 'normal', 'linear', () => {this.animate = false;});
+      }
+    };
+    var isMobileDevice = navigator.userAgent.match(/iPad|iPhone|iPod/i) != null || screen.width <= 480;
+    if (isMobileDevice) {
+      leftBar.setVisible(false);
+    }
+
+    function onLeftToggle(self) {
+      leftBar.setVisible(!leftBar.visible)
+    }
+  </script>
+</body>
+</html>

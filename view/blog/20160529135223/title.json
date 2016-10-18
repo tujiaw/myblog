@@ -1,0 +1,6 @@
+{
+ "type": "electron",
+ "title": "介绍electron框架",
+ "brief": "这是一个整合了Node，Chromium，V8的一个框架，通过它可以使用JavaScript，HTML, CSS技术来开发桌面应用程序",
+ "date": "2016/05/29 13:52:23"
+ }

@@ -1,0 +1,6 @@
+{
+ "type": "Qt",
+ "title": "QFrame与QWidget的区别",
+ "brief": "从QWidget继承实现了一个自定义的widget，在设置样式表的时候发现没有生效，发现原来跟QFrame有关",
+ "date": "2016/05/31 22:04:34"
+ }

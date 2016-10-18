@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/1.10.1/simplemde.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheets/editor.css">
+    <script src="https://cdn.jsdelivr.net/markdown-it/6.0.2/markdown-it.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/simplemde/1.10.1/simplemde.min.js"></script>
+    <script src="../thirdparty/bmob-min.js"></script>
+    <script src="../thirdparty/ejs.min.js"></script>
+    <script src="../thirdparty/md5.min.js"></script>
+    <script src="../javascripts/bmobController.js"></script>
+    <script src="../javascripts/common.js"></script>
+
+    <script id="blog" type="text/template">
+        <h3>从现在起就开始写博客</h3>
+        <span class="tab-selector">类别：</span>
+        <select name="tab" id="type">
+            <option value="tab1">C/C++</option>
+            <option value="tab2">Swift</option>
+            <option value="tab3">Javascript</option>
+            <option value="tab4">Qt</option>
+            <option value="tab5">Node.js</option>
+            <option value="tab6">Iphone</option>
+            <option value="tab7">HTML5</option>
+            <option value="tab8">杂文</option>
+            <option value="tab9">美图</option>
+        </select>
+        <span>&nbsp;标题：</span>
+        <input type="text" id="title">
+        <div class="markdown_editor in_editor">
+            <div class="markdown_in_editor">
+                <textarea name="t_content" id="myeditor" cols="30" rows="10" class="editor"></textarea>
+                <div class="editor_buttons">
+                    <div class="alert alert-warning">
+                        <strong>请填写完整的内容!</strong>
+                    </div>
+                    <div class="alert alert-success">
+                        <strong>提交博客成功。</strong>
+                    </div>
+                    <input type="button" class="btn btn-success" value="发布" onclick="onPublishBlog(this)">
+                </div>
+            </div>
+        </div>
+    </script>
+    <script class="song" type="text/template">
+        <tr class="songRow" songid="<%= songid %>" songname="<%= songname %>" singername="<%= singername %>" url="<%= url %>">
+            <td><a class="play" href="javascript:void(0)" songid="<%= songid %>" onclick="onPlay(this)"><span class="glyphicon glyphicon-music"></span></a></td>
+            <td><%= songname %></td>
+            <td><%= singername %></td>
+            <td><a class="collect" href="javascript:void(0)" songid="<%= songid %>" onclick="onCollect(this)"><span class="glyphicon glyphicon-star-empty"></span></a></td>
+        </tr>
+    </script>
+    <script id="music" type="text/template">
+        <div class="musicList">
+            <h3>内地</h3>
+            <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>播放</th>
+                <th>歌名</th>
+                <th>歌手</th>
+                <th>收藏</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            </table>
+            <footer></footer>
+        </div>
+        <div id="musicPlay">
+            <div class="rank btn-group btn-group-justified">
+                <a href="javascript:void(0)" topid="5" class="btn btn-primary" onclick="onRankChanged(this)">内地</a>
+                <a href="javascript:void(0)" topid="3" class="btn btn-primary" onclick="onRankChanged(this)">欧美</a>
+                <a href="javascript:void(0)" topid="6" class="btn btn-primary" onclick="onRankChanged(this)">港台</a>
+                <a href="javascript:void(0)" topid="16" class="btn btn-primary" onclick="onRankChanged(this)">韩国</a>
+                <a href="javascript:void(0)" topid="17" class="btn btn-primary" onclick="onRankChanged(this)">日本</a>
+                <a href="javascript:void(0)" topid="18" class="btn btn-primary" onclick="onRankChanged(this)">民谣</a>
+                <a href="javascript:void(0)" topid="19" class="btn btn-primary" onclick="onRankChanged(this)">摇滚</a>
+                <a href="javascript:void(0)" topid="23" class="btn btn-primary" onclick="onRankChanged(this)">销量</a>
+                <a href="javascript:void(0)" topid="26" class="btn btn-primary" onclick="onRankChanged(this)">热歌</a>
+            </div>
+            <p>当前歌曲名</p>
+            <audio src="" controls="controls">您的浏览器版本太低，不支持audio标签</auto>
+        </div>
+    </script>
+</head>
+<body>
+    <div class="container">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="javascript:void(0)" name="blog" data-toggle="tab">博客</a></li>
+          <li ><a href="javascript:void(0)" name="music" data-toggle="tab">音乐</a></li>
+        </ul>
+        <div class="tabContent">
+        </div>
+    </div>
+
+<script src="../javascripts/editor.js"></script>
+</body>
+</html>

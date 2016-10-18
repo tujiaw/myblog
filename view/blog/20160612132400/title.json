@@ -1,0 +1,6 @@
+{
+ "type": "Qt",
+ "title": "QWebEngineView与js交互",
+ "brief": "Qt新版本使用QWebEngineView来展示html页面对QWebView不再进行维护了，QWebEngineView使用chromium内核将带来更好的用户体验。",
+ "date": "2016/06/12 13:24:00"
+ }

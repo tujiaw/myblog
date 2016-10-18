@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tujiaw Github</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.4.0/styles/default.min.css">
+  <link rel="stylesheet" href="../../../stylesheets/detail.css">
+  <script src="https://cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="//cdn.jsdelivr.net/highlight.js/9.4.0/highlight.min.js"></script>
+
+  <script id="articleTempl" type="text/template">
+      <article>
+        <div id="header">
+          <header>
+            <h1 onclick="onTitleClicked(this)" url="<%= url %>"><%= title %></h1>
+          </header>
+          <footer>
+            <ul>
+              <li><span class="glyphicon glyphicon-bookmark"></span></li>
+              <li><%= type %></li>
+              <li class="separator">&nbsp;|&nbsp;</li>
+              <li><span class="glyphicon glyphicon-calendar"></span></li>
+              <li><%= date %></li>
+            </ul>
+          </footer>
+        </div>
+        <div id="content">
+          <%- content %>
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  </script>
+  <script id="duoshauoTempl" type="text/template">
+      <!-- 多说评论框 start -->
+      <div class="ds-thread" data-thread-key="<%= dataThreadKey %>" data-title="<%= dataTitle %>" data-url="<%= dataUrl %>"></div>
+      <!-- 多说评论框 end -->
+  </script>
+</head>
+<body>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html">Home</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Tujiaw</a></li>
+            <li><a href="#about">&#x5173;&#x4E8E;</a></li>
+            <li><a href="../../../view/usefullinks.html">&#x5E38;&#x7528;&#x94FE;&#x63A5;</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&#x6587;&#x7AE0;&#x5206;&#x7C7B; <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">&#x6309;&#x65E5;&#x671F;&#x5F52;&#x6863;</a></li>
+                <li><a href="#">&#x6309;&#x7C7B;&#x522B;&#x5F52;&#x6863;</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <div id="sectionHeader"></div>
+    <section>
+      <article>
+        <div id="header">
+          <header>
+            <h1 onclick="onTitleClicked(this)" url="view/blog/20160526132522/detail.html">&#x600E;&#x6837;&#x5728;&#x672C;&#x535A;&#x5BA2;&#x4E2D;&#x53D1;&#x5E03;&#x4E00;&#x7BC7;&#x65B0;&#x6587;&#x7AE0;</h1>
+          </header>
+          <footer>
+            <ul>
+              <li><span class="glyphicon glyphicon-bookmark"></span></li>
+              <li>&#x6742;&#x6587;</li>
+              <li class="separator">&#xA0;|&#xA0;</li>
+              <li><span class="glyphicon glyphicon-calendar"></span></li>
+              <li>2016/05/26 13:25:22</li>
+            </ul>
+          </footer>
+        </div>
+        <div id="content">
+          <p><strong>&#x5199;&#x65B0;&#x6587;&#x7AE0;&#x8FC7;&#x7A0B;</strong></p>
+<ol>
+<li>node init</li>
+</ol>
+<blockquote>
+<p>&#x751F;&#x6210;&#x65B0;&#x7684;&#x76EE;&#x5F55;&#x548C;&#x6587;&#x4EF6;&#x6A21;&#x7248;</p>
+</blockquote>
+<ol start="2">
+<li>&#x5230;&#x65B0;&#x76EE;&#x5F55;&#x91CC;&#x9762;&#x53BB;&#x586B;&#x5199;title.json&#x548C;content.md&#x6587;&#x4EF6;&#x5185;&#x5BB9;</li>
+</ol>
+<blockquote>
+<p>&#x518D;title.json&#x7F16;&#x5199;&#x6587;&#x7AE0;&#x7684;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;&#x7C7B;&#x578B;&#xFF0C;&#x6807;&#x9898;&#xFF0C;&#x7B80;&#x4ECB;&#xFF0C;&#x65F6;&#x95F4;&#xFF1B;
+&#x4F7F;&#x7528;MarkdownPad&#x7F16;&#x5199;&#x5185;&#x5BB9;&#xFF0C;&#x5C06;&#x5176;&#x7C98;&#x8D34;&#x5230;content.md&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+</blockquote>
+<ol start="3">
+<li>node update</li>
+</ol>
+<blockquote>
+<p>&#x66F4;&#x65B0;&#x7F51;&#x9875;</p>
+</blockquote>
+<ol start="4">
+<li>push&#x5230;github</li>
+</ol>
+<p><a href="https://pages.github.com/" title="github pages">https://pages.github.com/</a></p>
+
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  </section>
+    <div id="duoshuo">
+      <!-- 多说评论框 start -->
+      <div class="ds-thread" data-thread-key="20160526132522" data-title="&#x600E;&#x6837;&#x5728;&#x672C;&#x535A;&#x5BA2;&#x4E2D;&#x53D1;&#x5E03;&#x4E00;&#x7BC7;&#x65B0;&#x6587;&#x7AE0;" data-url="http://tujiaw.github.io/view/blog/20160526132522/detail.html"></div>
+      <!-- 多说评论框 end -->
+  </div>
+    <div id="sectionFooter"></div>
+    <footer id="sectionFooter"></footer>
+    <footer id="containerFooter">&#xA9;&#xA0;2016&#xA0;tujiaw&amp;zhudan All rights reserved.</footer>
+  </div>
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"tujiaw"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+<!-- 多说公共JS代码 end -->
+  <!-- 代码高亮 -->
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

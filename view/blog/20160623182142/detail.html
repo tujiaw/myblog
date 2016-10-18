@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tujiaw Github</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.4.0/styles/default.min.css">
+  <link rel="stylesheet" href="../../../stylesheets/detail.css">
+  <script src="https://cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="//cdn.jsdelivr.net/highlight.js/9.4.0/highlight.min.js"></script>
+
+  <script id="articleTempl" type="text/template">
+      <article>
+        <div id="header">
+          <header>
+            <h1 onclick="onTitleClicked(this)" url="<%= url %>"><%= title %></h1>
+          </header>
+          <footer>
+            <ul>
+              <li><span class="glyphicon glyphicon-bookmark"></span></li>
+              <li><%= type %></li>
+              <li class="separator">&nbsp;|&nbsp;</li>
+              <li><span class="glyphicon glyphicon-calendar"></span></li>
+              <li><%= date %></li>
+            </ul>
+          </footer>
+        </div>
+        <div id="content">
+          <%- content %>
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  </script>
+  <script id="duoshauoTempl" type="text/template">
+      <!-- 多说评论框 start -->
+      <div class="ds-thread" data-thread-key="<%= dataThreadKey %>" data-title="<%= dataTitle %>" data-url="<%= dataUrl %>"></div>
+      <!-- 多说评论框 end -->
+  </script>
+</head>
+<body>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html">Home</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Tujiaw</a></li>
+            <li><a href="#about">&#x5173;&#x4E8E;</a></li>
+            <li><a href="../../../view/usefullinks.html">&#x5E38;&#x7528;&#x94FE;&#x63A5;</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&#x6587;&#x7AE0;&#x5206;&#x7C7B; <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">&#x6309;&#x65E5;&#x671F;&#x5F52;&#x6863;</a></li>
+                <li><a href="#">&#x6309;&#x7C7B;&#x522B;&#x5F52;&#x6863;</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <div id="sectionHeader"></div>
+    <section>
+      <article>
+        <div id="header">
+          <header>
+            <h1 onclick="onTitleClicked(this)" url="view/blog/20160623182142/detail.html">&#x4F7F;&#x7528;QWebEngineView&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x65F6;&#x5D29;&#x6E83;</h1>
+          </header>
+          <footer>
+            <ul>
+              <li><span class="glyphicon glyphicon-bookmark"></span></li>
+              <li>Qt</li>
+              <li class="separator">&#xA0;|&#xA0;</li>
+              <li><span class="glyphicon glyphicon-calendar"></span></li>
+              <li>2016/06/23 18:21:42</li>
+            </ul>
+          </footer>
+        </div>
+        <div id="content">
+          <p>&#x4F7F;&#x7528;QWebEngineView&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x65F6;&#x5D29;&#x6E83;</p>
+<p>&#x5148;&#x770B;&#x5806;&#x6808;&#x56FE;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x78B0;&#x5230;&#x8DDF;&#x6211;&#x4E00;&#x6837;&#x7684;&#x95EE;&#x9898;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x5F80;&#x4E0B;&#x770B;&#xFF1A;
+<img src="http://i2.piimg.com/565738/d37bf82edab3a0a2.png" alt="&#x6B64;&#x5904;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x7684;&#x63CF;&#x8FF0;"></p>
+<p>Qt5.6&#x8BF7;&#x770B;&#x5B98;&#x65B9;&#x7684;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;webengine content manipulation engine
+&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#xFF0C;&#x7136;&#x540E;&#x9000;&#x51FA;&#x7A0B;&#x5E8F;&#x4F1A;&#x8F93;&#x51FA;&#x4E0B;&#x9762;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code>[0623/184240:FATAL:resource_scheduler.cc(891)] Check failed: client_map_.empty().
+Backtrace:
+GetHandleVerifier [0x11A179B1+278177]
+QtWebEngineCore::UserScript::isNull [0x1196A18F+3795199]
+QtWebEngineCore::JavaScriptDialogController::qt_static_metacall [0x107BC3C6+6519606]
+QtWebEngineCore::JavaScriptDialogController::qt_static_metacall [0x10675B86+5182198]
+QtWebEngineCore::JavaScriptDialogController::qt_static_metacall [0x10675806+5181302]
+QtWebEngineCore::JavaScriptDialogController::qt_static_metacall [0x10688C20+5260176]
+QtWebEngineCore::JavaScriptDialogController::qt_static_metacall [0x10688B9A+5260042]
+QtWebEngineCore::JavaScriptDialogController::qt_static_metacall [0x1067E0ED+5216349]
+QtWebEngineCore::CookieMonsterDelegateQt::hasCookieMonster [0x12FB3A81+98977]
+QtWebEngineCore::FilePickerController::mode [0x11E8680A+760762]
+QtWebEngineCore::BrowserContextAdapter::customUrlSchemeHandlers [0x10C858EC+1208572]
+QtWebEngineCore::BrowserContextAdapter::customUrlSchemeHandlers [0x1118F81F+6492207]
+GetHandleVerifier [0x11A33F7D+394349]
+QtWebEngineCore::UserScript::isNull [0x11979BD8+3859272]
+QtWebEngineCore::UserScript::isNull [0x119782B4+3852836]
+QtWebEngineCore::UserScript::isNull [0x119787FD+3854189]
+GetHandleVerifier [0x11A366F2+404450]
+GetHandleVerifier [0x11A38192+411266]
+GetHandleVerifier [0x11A380FC+411116]
+QtWebEngineCore::UserScript::isNull [0x119799E7+3858775]
+QtWebEngineCore::UserScript::isNull [0x119A9336+4053670]
+QtWebEngineCore::UserScript::isNull [0x1197989D+3858445]
+QtWebEngineCore::UserScript::isNull [0x119BFCA6+4146198]
+QtWebEngineCore::JavaScriptDialogController::qt_static_metacall [0x105FE414+4692868]
+QtWebEngineCore::JavaScriptDialogController::qt_static_metacall [0x105FF22B+4696475]
+QtWebEngineCore::UserScript::isNull [0x119C07A9+4149017]
+QtWebEngineCore::UserScript::isNull [0x119C7536+4177062]
+BaseThreadInitThunk [0x760E338A+18]
+RtlInitializeExceptionChain [0x77119A02+99]
+RtlInitializeExceptionChain [0x771199D5+54]
+</code></pre>
+<p>&#x5982;&#x679C;&#x7528;&#x7684;&#x662F;vs2013&#x6253;&#x5F00;&#x9000;&#x51FA;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;&#x65AD;&#x70B9;&#x5806;&#x6808;&#x5982;&#x4E0A;&#x9762;&#x7684;&#x622A;&#x56FE;&#x3002;</p>
+<p><strong>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;</strong></p>
+<ul>
+<li>&#x5C06;main.cpp&#x4E2D;&#x7684;</li>
+</ul>
+<pre><code>MainWindow *browser = new MainWindow(url);
+browser-&gt;show();
+return app.exec();
+
+</code></pre>
+<p>&#x6539;&#x4E3A;</p>
+<pre><code>MainWindow browser(url);
+browser.show();
+return app.exec();
+</code></pre>
+<p>&#x6216;&#x8005;&#x6539;&#x4E3A;</p>
+<pre><code>MainWindow *browser = new MainWindow(url);
+browser-&gt;show();
+int code = app.exec();
+delete browser;
+return code;
+</code></pre>
+<ul>
+<li>&#x4ECE;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#xFF0C;&#x5728;exec&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x7EC8;&#x6B62;&#x540E;&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x524D;&#x8981;&#x9500;&#x6BC1;&#x6389;&#x4F7F;&#x7528;QWebEngineView&#x7684;&#x5BF9;&#x8C61;&#x624D;&#x884C;&#x3002;</li>
+</ul>
+<p><em>&#x4E0D;&#x77E5;&#x9053;Qt&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x80FD;&#x4FEE;&#x590D;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF01;&#xFF01;&#xFF01;</em></p>
+
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  </section>
+    <div id="duoshuo">
+      <!-- 多说评论框 start -->
+      <div class="ds-thread" data-thread-key="20160623182142" data-title="&#x4F7F;&#x7528;QWebEngineView&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x65F6;&#x5D29;&#x6E83;" data-url="http://tujiaw.github.io/view/blog/20160623182142/detail.html"></div>
+      <!-- 多说评论框 end -->
+  </div>
+    <div id="sectionFooter"></div>
+    <footer id="sectionFooter"></footer>
+    <footer id="containerFooter">&#xA9;&#xA0;2016&#xA0;tujiaw&amp;zhudan All rights reserved.</footer>
+  </div>
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"tujiaw"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+<!-- 多说公共JS代码 end -->
+  <!-- 代码高亮 -->
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

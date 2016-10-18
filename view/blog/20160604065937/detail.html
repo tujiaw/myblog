@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tujiaw Github</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.4.0/styles/default.min.css">
+  <link rel="stylesheet" href="../../../stylesheets/detail.css">
+  <script src="https://cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="//cdn.jsdelivr.net/highlight.js/9.4.0/highlight.min.js"></script>
+
+  <script id="articleTempl" type="text/template">
+      <article>
+        <div id="header">
+          <header>
+            <h1 onclick="onTitleClicked(this)" url="<%= url %>"><%= title %></h1>
+          </header>
+          <footer>
+            <ul>
+              <li><span class="glyphicon glyphicon-bookmark"></span></li>
+              <li><%= type %></li>
+              <li class="separator">&nbsp;|&nbsp;</li>
+              <li><span class="glyphicon glyphicon-calendar"></span></li>
+              <li><%= date %></li>
+            </ul>
+          </footer>
+        </div>
+        <div id="content">
+          <%- content %>
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  </script>
+  <script id="duoshauoTempl" type="text/template">
+      <!-- 多说评论框 start -->
+      <div class="ds-thread" data-thread-key="<%= dataThreadKey %>" data-title="<%= dataTitle %>" data-url="<%= dataUrl %>"></div>
+      <!-- 多说评论框 end -->
+  </script>
+</head>
+<body>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html">Home</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Tujiaw</a></li>
+            <li><a href="#about">&#x5173;&#x4E8E;</a></li>
+            <li><a href="../../../view/usefullinks.html">&#x5E38;&#x7528;&#x94FE;&#x63A5;</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&#x6587;&#x7AE0;&#x5206;&#x7C7B; <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">&#x6309;&#x65E5;&#x671F;&#x5F52;&#x6863;</a></li>
+                <li><a href="#">&#x6309;&#x7C7B;&#x522B;&#x5F52;&#x6863;</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <div id="sectionHeader"></div>
+    <section>
+      <article>
+        <div id="header">
+          <header>
+            <h1 onclick="onTitleClicked(this)" url="view/blog/20160604065937/detail.html">&#x4F7F;&#x7528;photoshop&#x5C06;&#x56FE;&#x7247;&#x5236;&#x4F5C;&#x6210;&#x5706;&#x5F62;</h1>
+          </header>
+          <footer>
+            <ul>
+              <li><span class="glyphicon glyphicon-bookmark"></span></li>
+              <li>photoshop</li>
+              <li class="separator">&#xA0;|&#xA0;</li>
+              <li><span class="glyphicon glyphicon-calendar"></span></li>
+              <li>2016/06/04 06:59:37</li>
+            </ul>
+          </footer>
+        </div>
+        <div id="content">
+          <ol>
+<li>&#x7528;Photoshop&#x6253;&#x5F00;&#x56FE;&#x7247;&#xFF0C;&#x70B9;&#x51FB;&#x692D;&#x5706;&#x9009;&#x62E9;&#x5DE5;&#x5177;&#xFF0C;&#x6309;&#x4F4F;Shift&#x952E;&#x7528;&#x9F20;&#x6807;&#x5728;&#x56FE;&#x7247;&#x4E0A;&#x753B;&#x51FA;&#x4E00;&#x4E2A;&#x4F60;&#x60F3;&#x8981;&#x7684;&#x5706;&#x5F62;&#xFF1B;
+<img src="http://i2.buimg.com/83706b44eb2e9b73.jpg" alt="&#x6B64;&#x5904;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x7684;&#x63CF;&#x8FF0;"></li>
+<li>&#x70B9;&#x51FB;&#x9F20;&#x6807;&#x53F3;&#x952E;&#x9009;&#x62E9;&#x901A;&#x8FC7;&#x62F7;&#x8D1D;&#x7684;&#x56FE;&#x5C42;&#xFF0C;&#x5728;&#x56FE;&#x5C42;&#x4E2D;&#x9009;&#x4E2D;&#x80CC;&#x666F;&#x7136;&#x540E;&#x70B9;&#x51FB;&#x5220;&#x9664;&#x56FE;&#x5C42;&#xFF1B;
+<img src="http://i2.buimg.com/2704fda5f58a3396.jpg" alt="&#x6B64;&#x5904;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x7684;&#x63CF;&#x8FF0;">
+<img src="http://i2.buimg.com/953ec2578533f50a.jpg" alt="&#x6B64;&#x5904;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x7684;&#x63CF;&#x8FF0;"></li>
+<li>&#x70B9;&#x51FB;&#x900F;&#x89C6;&#x88C1;&#x526A;&#x5DE5;&#x5177;&#xFF0C;&#x7528;&#x9F20;&#x6807;&#x9009;&#x4E2D;&#x5706;&#x5F62;&#x56FE;&#x50CF;&#xFF0C;&#x8C03;&#x6574;&#x5927;&#x5C0F;&#x4F7F;&#x5176;&#x521A;&#x521A;&#x80FD;&#x591F;&#x5B8C;&#x5168;&#x8986;&#x76D6;&#xFF0C;&#x7136;&#x540E;&#x6309;&#x56DE;&#x8F66;&#x952E;&#xFF0C;&#x5927;&#x529F;&#x544A;&#x6210;&#x4FDD;&#x5B58;&#x6210;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x683C;&#x5F0F;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;
+<img src="http://i2.buimg.com/d822cd3c8ac78ac5.jpg" alt="&#x6B64;&#x5904;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x7684;&#x63CF;&#x8FF0;">
+<img src="http://i2.buimg.com/d86bb3377485457a.jpg" alt="&#x6B64;&#x5904;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x7684;&#x63CF;&#x8FF0;"></li>
+</ol>
+
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  </section>
+    <div id="duoshuo">
+      <!-- 多说评论框 start -->
+      <div class="ds-thread" data-thread-key="20160604065937" data-title="&#x4F7F;&#x7528;photoshop&#x5C06;&#x56FE;&#x7247;&#x5236;&#x4F5C;&#x6210;&#x5706;&#x5F62;" data-url="http://tujiaw.github.io/view/blog/20160604065937/detail.html"></div>
+      <!-- 多说评论框 end -->
+  </div>
+    <div id="sectionFooter"></div>
+    <footer id="sectionFooter"></footer>
+    <footer id="containerFooter">&#xA9;&#xA0;2016&#xA0;tujiaw&amp;zhudan All rights reserved.</footer>
+  </div>
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"tujiaw"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+<!-- 多说公共JS代码 end -->
+  <!-- 代码高亮 -->
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

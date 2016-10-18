@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tujiaw Github</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.4.0/styles/default.min.css">
+  <link rel="stylesheet" href="../../../stylesheets/detail.css">
+  <script src="https://cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="//cdn.jsdelivr.net/highlight.js/9.4.0/highlight.min.js"></script>
+
+  <script id="articleTempl" type="text/template">
+      <article>
+        <div id="header">
+          <header>
+            <h1 onclick="onTitleClicked(this)" url="<%= url %>"><%= title %></h1>
+          </header>
+          <footer>
+            <ul>
+              <li><span class="glyphicon glyphicon-bookmark"></span></li>
+              <li><%= type %></li>
+              <li class="separator">&nbsp;|&nbsp;</li>
+              <li><span class="glyphicon glyphicon-calendar"></span></li>
+              <li><%= date %></li>
+            </ul>
+          </footer>
+        </div>
+        <div id="content">
+          <%- content %>
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  </script>
+  <script id="duoshauoTempl" type="text/template">
+      <!-- 多说评论框 start -->
+      <div class="ds-thread" data-thread-key="<%= dataThreadKey %>" data-title="<%= dataTitle %>" data-url="<%= dataUrl %>"></div>
+      <!-- 多说评论框 end -->
+  </script>
+</head>
+<body>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html">Home</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Tujiaw</a></li>
+            <li><a href="#about">&#x5173;&#x4E8E;</a></li>
+            <li><a href="../../../view/usefullinks.html">&#x5E38;&#x7528;&#x94FE;&#x63A5;</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&#x6587;&#x7AE0;&#x5206;&#x7C7B; <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">&#x6309;&#x65E5;&#x671F;&#x5F52;&#x6863;</a></li>
+                <li><a href="#">&#x6309;&#x7C7B;&#x522B;&#x5F52;&#x6863;</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <div id="sectionHeader"></div>
+    <section>
+      <article>
+        <div id="header">
+          <header>
+            <h1 onclick="onTitleClicked(this)" url="view/blog/20160531220434/detail.html">QFrame&#x4E0E;QWidget&#x7684;&#x533A;&#x522B;</h1>
+          </header>
+          <footer>
+            <ul>
+              <li><span class="glyphicon glyphicon-bookmark"></span></li>
+              <li>Qt</li>
+              <li class="separator">&#xA0;|&#xA0;</li>
+              <li><span class="glyphicon glyphicon-calendar"></span></li>
+              <li>2016/05/31 22:04:34</li>
+            </ul>
+          </footer>
+        </div>
+        <div id="content">
+          <h3>QFrame&#x4E0E;QWidget&#x7684;&#x533A;&#x522B;</h3>
+<p>QFrame&#x662F;&#x57FA;&#x672C;&#x63A7;&#x4EF6;&#x7684;&#x57FA;&#x7C7B;&#xFF0C;QWidget&#x662F;QFrame&#x57FA;&#x7C7B;&#xFF0C;&#x5173;&#x7CFB;&#x5982;&#x4E0B;&#xFF1A;</p>
+<blockquote>
+<p>QPushButton,QLabel... -&gt; QFrame -&gt; QWidget</p>
+</blockquote>
+<p>&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x4F1A;&#x4ECE;QFrame&#x6216;&#x8005;QWidget&#x7EE7;&#x627F;&#x7136;&#x540E;&#x81EA;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x7684;widget&#xFF0C;&#x5728;&#x8BBE;&#x7F6E;&#x6837;&#x5F0F;&#x8868;&#x7684;&#x65F6;&#x5019;&#x5B83;&#x4EEC;&#x5C31;&#x6709;&#x4E00;&#x4E2A;&#x5927;&#x7684;&#x533A;&#x522B;&#x3002;
+<em>dialog.h</em></p>
+<pre><code>#ifndef DIALOG_H
+#define DIALOG_H
+
+#include &lt;QDialog&gt;
+#include &lt;QFrame&gt;
+namespace Ui {
+class Dialog;
+}
+
+class MyWidget : public QWidget {
+    Q_OBJECT
+public:
+    MyWidget(QWidget *parent = 0) : QWidget(parent) {
+        this-&gt;setStyleSheet(&quot;QWidget{background:#ff0000;} QWidget:hover{background:#00ff00;}&quot;);
+    }
+};
+
+class MyFrame : public QFrame {
+    Q_OBJECT
+public:
+    MyFrame(QWidget *parent = 0) : QFrame(parent) {
+        this-&gt;setStyleSheet(&quot;QWidget{background:#ff0000;} QWidget:hover{background:#00ff00;}&quot;);
+    }
+};
+
+class Dialog : public QDialog
+{
+    Q_OBJECT
+
+public:
+    explicit Dialog(QWidget *parent = 0);
+    ~Dialog();
+
+private:
+    Ui::Dialog *ui;
+};
+
+#endif // DIALOG_H
+
+</code></pre>
+<p><em>dialog.cpp</em></p>
+<pre><code>#include &quot;dialog.h&quot;
+#include &quot;ui_dialog.h&quot;
+
+Dialog::Dialog(QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::Dialog)
+{
+    ui-&gt;setupUi(this);
+
+    MyWidget *widget = new MyWidget(this);
+    MyFrame *frame = new MyFrame(this);
+    widget-&gt;setFixedSize(50, 50);
+    frame-&gt;setFixedSize(50, 50);
+    widget-&gt;move(0, 0);
+    frame-&gt;move(0, 50);
+}
+
+Dialog::~Dialog()
+{
+    delete ui;
+}
+
+</code></pre>
+<p>&#x5982;&#x4E0B;&#x56FE;&#xFF0C;&#x53D1;&#x73B0;&#x4ECE;QWidget&#x7EE7;&#x627F;&#x8FC7;&#x6765;&#x7684;MyWidget&#x5E76;&#x6CA1;&#x6709;&#x663E;&#x793A;&#x51FA;&#x6837;&#x5F0F;&#x6765;
+<img src="http://i4.buimg.com/0c42276bac9976a1.png" alt="&#x6B64;&#x5904;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x7684;&#x63CF;&#x8FF0;"></p>
+<p>&#x5177;&#x4F53;&#x539F;&#x56E0;&#x8FD8;&#x4E0D;&#x662F;&#x5F88;&#x6E05;&#x695A;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E0B;&#x9762;&#x4E00;&#x6BB5;&#x8BDD;&#x53EF;&#x80FD;&#x5BF9;&#x6211;&#x4EEC;&#x6709;&#x4E9B;&#x5E2E;&#x52A9;&#xFF1A;
+<em>QWidget Supports only the background, background-clip and background-origin properties.
+If you subclass from QWidget, you need to provide a paintEvent for your custom QWidget as below:</em></p>
+<pre><code>void CustomWidget::paintEvent(QPaintEvent *)
+{
+    QStyleOption opt;
+    opt.init(this);
+    QPainter p(this);
+    style()-&gt;drawPrimitive(QStyle::PE_Widget, &amp;opt, &amp;p, this);
+}
+</code></pre>
+<p><em>The above code is a no-operation if there is no stylesheet set.
+Warning: Make sure you define the Q_OBJECT macro for your custom widget.</em></p>
+
+        </div>
+        <div class="clearBoth"></div>
+      </article>
+  </section>
+    <div id="duoshuo">
+      <!-- 多说评论框 start -->
+      <div class="ds-thread" data-thread-key="20160531220434" data-title="QFrame&#x4E0E;QWidget&#x7684;&#x533A;&#x522B;" data-url="http://tujiaw.github.io/view/blog/20160531220434/detail.html"></div>
+      <!-- 多说评论框 end -->
+  </div>
+    <div id="sectionFooter"></div>
+    <footer id="sectionFooter"></footer>
+    <footer id="containerFooter">&#xA9;&#xA0;2016&#xA0;tujiaw&amp;zhudan All rights reserved.</footer>
+  </div>
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"tujiaw"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+<!-- 多说公共JS代码 end -->
+  <!-- 代码高亮 -->
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

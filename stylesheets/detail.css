@@ -1,0 +1,106 @@
+body {
+  background:#cccccc;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  margin: 0px auto;
+  color: #fff;
+
+  background-image: url(../images/bk.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#sectionHeader {
+  height: 50px;
+}
+
+#sectionFooter {
+  display: block;
+  height: 20px;
+  background: transparent;
+  clear: both;
+}
+
+#sign {
+  color: #eee;
+  text-align: center;
+}
+
+section {
+  display: block;
+  width: 100%;
+}
+
+article {
+  background: rgba(0, 0, 0, 0.55);
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 20px #888;
+  -moz-box-shadow: 2px 2px 20px #888;
+}
+
+article #header {
+  text-align: center;
+}
+
+article header h1 {
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+article ul li {
+  font-size: 9px;
+  list-style: none;
+  display: inline;
+  color: #a4a4a4;
+  font-family: 'Droid Serif',Georgia,serif;
+  font-weight: 400;
+}
+
+article ul .separator {
+  color: #FAB927;
+}
+
+#containerFooter {
+  clear: both;
+  background: #333333;
+  color: #acacac;
+  text-align: center;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  z-index: 2;
+}
+
+footer h2 {
+  font-size: 12px;
+  color: #acacac;
+}
+
+.clearBoth {
+  clear: both;
+}
+
+/*------多说CSS样式------*/
+#ds-thread {
+  margin:12px;
+  z-index: 1;
+}
+#ds-thread {
+  background: #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+#ds-reset {
+  padding: 10px;
+}
+/*======多说CSS样式======*/
